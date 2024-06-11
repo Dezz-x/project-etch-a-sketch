@@ -5,3 +5,23 @@
     box-sizing: border-box;
     background-color: #171717;
 }
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1{
+    margin: 20px;
+    color: #ededed;
+    font-size: 52px;
+}
+
+.square-container{
+    height: 400px;
+    width: 400px;
+    border: 2px solid #ededed;
+}
