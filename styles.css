@@ -22,14 +22,21 @@ h1{
 
 .container{
     display: flex;
-    flex-wrap: wrap;
-    height: 400px;
     width: 400px;
+    height: 400px;
 }
 
-.square{
+.rows{
+    flex-direction: row;
+    flex: 1;
     height: 25px;
     width: 25px;
+    border: 1px solid #ededed;
+}
+
+.columns{
+    flex-direction: column;
+    flex: 1;
     border: 1px solid #ededed;
 }
 
