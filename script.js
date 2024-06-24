@@ -1,33 +1,18 @@
 const container = document.querySelector(".container");
 
-/*function createRow(){
-    for(let i = 0; i < 16; i++){
-        for(let j = 0; j < 16; j++){
-            const square = document.createElement("div");
-            square.classList.add("square");
+function createGrid(){
+    for (let i = 0; i < 16; i++){
+        const column = document.createElement("div");
+        column.classList.add("column");
     
-            container.appendChild(square);
+        container.appendChild(column);
+        
+        for(let j = 0; j < 16; j++){
+            const row = document.createElement("div");
+            row.classList.add("row");
+    
+            column.appendChild(row);
         };
     };
 };
-createRow();*/
-
-function createRow(){
-    for(let i = 0; i < 16; i++){
-        const rows = document.createElement("div");
-        rows.classList.add("rows");
-
-        container.appendChild(rows);
-    };
-};
-createRow();
-
-function createColumn(){
-    for(let j = 0; j < 16; j++){
-        const columns = document.createElement("div");
-        columns.classList.add("columns")
-
-        container.appendChild(columns);
-    };
-};
-createColumn();
+createGrid();

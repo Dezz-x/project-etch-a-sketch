@@ -22,24 +22,24 @@ h1{
 
 .container{
     display: flex;
-    width: 400px;
-    height: 400px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 500px;
+    height: 500px;
 }
 
-.rows{
-    flex-direction: row;
-    flex: 1;
-    height: 25px;
-    width: 25px;
-    border: 1px solid #ededed;
-}
-
-.columns{
+.column{
+    display: flex;
     flex-direction: column;
-    flex: 1;
+    justify-content: space-evenly;
+    flex: 1 1 0;
+}
+
+.row{
+    flex-grow: 1;
     border: 1px solid #ededed;
 }
 
-.square:hover{
+.row:hover{
     background-color: #ededed;
 }
