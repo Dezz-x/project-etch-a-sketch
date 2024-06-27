@@ -15,9 +15,22 @@ body{
 }
 
 h1{
-    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     color: #ededed;
     font-size: 52px;
+}
+
+.btn {
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #da0037;
+    font-weight: 700;
+    color: #ededed;
 }
 
 .container{
@@ -43,3 +56,4 @@ h1{
 .row:hover{
     background-color: #ededed;
 }
+
