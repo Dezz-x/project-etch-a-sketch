@@ -24,13 +24,18 @@ h1{
 .btn {
     padding: 20px;
     margin: 20px;
-    border: none;
     border-radius: 10px;
+    border: none;
     cursor: pointer;
     font-size: 20px;
     background-color: #da0037;
     font-weight: 700;
     color: #ededed;
+}
+
+.btn:hover{
+    background-color: #ededed;
+    color: #171717;
 }
 
 .container{
