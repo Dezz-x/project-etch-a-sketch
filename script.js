@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const defaultGrid = createGrid();
 
 function createGrid(){
     for (let i = 0; i < 16; i++){
@@ -15,22 +16,38 @@ function createGrid(){
         };
     };
 };
-createGrid();
+
 
 const btn = document.querySelector(".btn");
 
-btn.addEventListener("click", () => {
-    getInput()
+btn.addEventListener("click", (getUserInput));
 
-    if(input < 1 || input > 100){
+function getUserInput(){
+    let userInput = prompt("Select a value between 1 and 100");
+
+    if(userInput < 0 || userInput > 100){
         alert("You must select a value between 1 and 100");
-        getInput();
+        getUserInput();
+    }
+    else if(userInput == 0){
+        return;
     }
     else{
-        console.log(input);
+        console.log(userInput);
     }
-});
 
-function getInput(){
-    let input = prompt("Select a value between 1 and 100");
-}
+    for(let i = 0; i < userInput; i++){
+        const userColumn = document.createElement("div");
+        userColumn.classList.add("column");
+
+        container.appendChild(userColumn);
+
+        for(j = 0; j < userInput; j++){
+            const userRow = document.createElement("div");
+            userRow.classList.add("row");
+
+            userColumn.appendChild(userRow);
+        }
+    }
+};
+
